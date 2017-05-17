@@ -1,4 +1,11 @@
-<p>
-  <input #newItem placeholder="item"/>
-  <button (click)="addToDo(newItem)">+</button>
-</p>
+<form #newItemForm="ngForm" (ngSubmit)="addToDo(newItemForm)">
+  <p>
+    New Item: <input name="newItem" #newItem="ngModel" ngModel required>
+    <button type="submit" [disabled]="!newItemForm.valid">Add</button>
+  </p>
+  <ul class="errors" [hidden]="newItem.valid || newItem.untouched">
+    <li [hidden]="!newItem.hasError('required')">
+      New item text is required
+    </li>
+  </ul>
+</form>

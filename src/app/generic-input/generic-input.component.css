@@ -1,0 +1,6 @@
+.ng-valid[required], .ng-valid.required  {
+  background-color: #DFD;
+}
+.ng-invalid.ng-touched:not(form) {
+  background-color: #FDD;
+}

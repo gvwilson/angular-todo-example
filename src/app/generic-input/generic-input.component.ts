@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-generic-input',
@@ -14,8 +15,7 @@ export class GenericInputComponent implements OnInit {
   ngOnInit() {
   }
 
-  addToDo(text: HTMLInputElement) {
-    this.newItem.emit(text.value);
-    text.value = '';
+  addToDo(newItemForm: NgForm) {
+    this.newItem.emit(newItemForm.value.newItem);
   }
 }
