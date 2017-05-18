@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.error {
+  font-family: Verdana, Arial;
+  font-size: 1em;
+  color: #ff0000;
+}
+
+.text {
+  font-family: Verdana, Arial;
+  font-size: 1em;
+  color: #000000;
+}
+
+h1 {
+  font-family: Verdana, Arial;
+  font-size: 1.6em;
+  color: #000000;
+}
+
+.button {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.offscreen-text {
+  left: -3000px;
+  position: absolute;
+  width: 500px;
+  font-size: 100%;
+  clip: rect(1px 1px 1px 1px);
+}
