@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
-import { ToDoListComponent } from './to-do-list/to-do-list.component';
-import { Observable } from 'rxjs/Observable';
+import { ToDoActions } from './to-do/store/to-do.actions';
+import { AppState } from './to-do/store/to-do.store';
+import { Store } from '@ngrx/store';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  title = 'app works!';
 
-  title = 'To Do';
-  thingsToDo = [
-    'Learn JavaScript',
-    'Learn Angular',
-    'Learn Redux'
-  ];
+constructor(
+    private store: Store<AppState>,
+    private todoActions: ToDoActions
+  ) { }
 
-  onNewItem(item: string) {
-    this.thingsToDo.push(item);
+  ngOnInit() {
+    this.store.dispatch(this.todoActions.getToDoItems());
   }
 }

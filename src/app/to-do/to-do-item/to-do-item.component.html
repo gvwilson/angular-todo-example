@@ -1,0 +1,5 @@
+<li>
+  <span [ngClass]="{complete: todoItem.completed}">{{todoItem.text}}</span> 
+  <ng-content select="[deleteButton]"></ng-content>
+  <ng-content select="[toggleButton]"></ng-content>
+</li>

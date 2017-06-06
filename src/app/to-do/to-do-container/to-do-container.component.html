@@ -1,0 +1,18 @@
+<app-to-do-input (onAddToDoItem)="onAddToDoItem($event)"></app-to-do-input>
+
+<app-to-do-filter (onFilterToDoItem)="onFiterToDoItem($event)"></app-to-do-filter>
+
+<app-to-do-list>
+  <app-to-do-item 
+    [todoItem]="todoItem"
+    *ngFor="let todoItem of todoItems$ | async">
+
+    <button (click)="onToggleToDoItem(todoItem)" toggleButton>
+        Complete
+    </button>
+    <button (click)="onDeleteToDoItem(todoItem)" deleteButton>
+        Delete
+    </button>
+
+  </app-to-do-item>
+</app-to-do-list>

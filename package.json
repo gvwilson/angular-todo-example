@@ -20,8 +20,15 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.3",
+    "@ngrx/store": "^2.2.2",
+    "@ngrx/store-devtools": "^3.2.4",
+    "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
+    "json-server": "^0.10.1",
+    "rxjs": "^5.4.0",
+    "typescript": "^2.3.4",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
@@ -41,6 +48,6 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.0.0"
+    "typescript": "~2.3.2"
   }
 }
