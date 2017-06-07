@@ -1,3 +1,5 @@
 <h1>{{title}}</h1>
 <app-to-do-list [thingsToDo]="thingsToDo"></app-to-do-list>
-<app-generic-input (newItem)="onNewItem($event)"></app-generic-input>
+<app-generic-input (newItem)="onNewItem($event)">
+    <div header><i>Enter a to do item</i></div>
+</app-generic-input>
